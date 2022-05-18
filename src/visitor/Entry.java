@@ -1,14 +1,17 @@
-public abstract class Entry {
+package visitor;
+
+import java.util.Iterator;
+
+public abstract class Entry implements Element {
     public abstract String getName();
     public abstract int getSize();
+
     public Entry add(Entry entry) throws FileTreatmentException {
         throw new FileTreatmentException();
     }
-    public void printList() {
-        printList("");
+    public Iterator iterator() throws FileTreatmentException {
+        throw new FileTreatmentException();
     }
-    protected abstract void printList(String prefix);
-
     public String toString() {
         return getName() + " (" + getSize() + ")";
     }

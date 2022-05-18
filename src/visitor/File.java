@@ -1,4 +1,6 @@
-public class File extends Entry{
+package visitor;
+
+public class File extends Entry {
     private String name;
     private int size;
 
@@ -7,18 +9,13 @@ public class File extends Entry{
         this.size = size;
     }
 
-    @Override
     public String getName() {
-        return this.name;
+        return name;
     }
-
-    @Override
     public int getSize() {
-        return this.size;
+        return size;
     }
-
-    @Override
-    protected void printList(String prefix) {
-        System.out.println(prefix + "/" + this);
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

@@ -1,3 +1,5 @@
+package composite;
+
 public class Main {
     public static void main(String[] args) {
         try {
@@ -28,7 +30,6 @@ public class Main {
             Park.add(new File("junk.mail", 500));
             rootdir.printList();
         } catch (FileTreatmentException e) {
-            e.printStackTrace();
         }
     }
 

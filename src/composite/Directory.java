@@ -1,7 +1,9 @@
+package composite;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Directory extends Entry{
+public class Directory extends Entry {
     private String name;
     private ArrayList directory = new ArrayList();
 
